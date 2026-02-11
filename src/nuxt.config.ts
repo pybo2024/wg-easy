@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     'radix-vue/nuxt',
     '@vueuse/nuxt',
     '@nuxt/eslint',
+    '@nuxt/test-utils/module',
   ],
   colorMode: {
     preference: 'system',
