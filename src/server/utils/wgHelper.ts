@@ -63,15 +63,15 @@ AllowedIPs = ${allowedIps.join(', ')}${extraLines.length ? `\n${extraLines.join(
         S2: wgInterface.s2,
         S3: wgInterface.s3,
         S4: wgInterface.s4,
+        H1: wgInterface.h1,
+        H2: wgInterface.h2,
+        H3: wgInterface.h3,
+        H4: wgInterface.h4,
         I1: wgInterface.i1,
         I2: wgInterface.i2,
         I3: wgInterface.i3,
         I4: wgInterface.i4,
         I5: wgInterface.i5,
-        H1: wgInterface.h1,
-        H2: wgInterface.h2,
-        H3: wgInterface.h3,
-        H4: wgInterface.h4,
       } as const;
 
       awgLines = Object.entries(parameters)
@@ -131,15 +131,15 @@ PostDown = ${iptablesTemplate(hooks.postDown, wgInterface)}`;
         S2: wgInterface.s2,
         S3: wgInterface.s3,
         S4: wgInterface.s4,
+        H1: wgInterface.h1,
+        H2: wgInterface.h2,
+        H3: wgInterface.h3,
+        H4: wgInterface.h4,
         I1: client.i1,
         I2: client.i2,
         I3: client.i3,
         I4: client.i4,
         I5: client.i5,
-        H1: wgInterface.h1,
-        H2: wgInterface.h2,
-        H3: wgInterface.h3,
-        H4: wgInterface.h4,
       } as const;
 
       awgLines = Object.entries(parameters)

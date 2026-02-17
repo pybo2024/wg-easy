@@ -213,7 +213,7 @@ class WireGuard {
       WG_DEBUG('New Wireguard Keys generated successfully.');
     }
 
-    if (wgInterface.h1 === 0) {
+    if (wgInterface.h1 === '0') {
       WG_DEBUG('Generating random AmneziaWG obfuscation parameters...');
       const headers = new Set<number>();
 
@@ -222,10 +222,10 @@ class WireGuard {
       }
       const [h1, h2, h3, h4] = Array.from(headers);
 
-      wgInterface.h1 = h1!;
-      wgInterface.h2 = h2!;
-      wgInterface.h3 = h3!;
-      wgInterface.h4 = h4!;
+      wgInterface.h1 = String(h1)!;
+      wgInterface.h2 = String(h2)!;
+      wgInterface.h3 = String(h3)!;
+      wgInterface.h4 = String(h4)!;
 
       Database.interfaces.update(wgInterface);
     }
